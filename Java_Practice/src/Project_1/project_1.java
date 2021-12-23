@@ -280,7 +280,7 @@ public class project_1 {
 	    	                        }
 	    	                        else if (choice_3==2)
 	    	                        {
-	    	                            String[] list = obj.list();
+	    	                            File[] list = obj.listFiles();
 	    	                            System.out.println("Retrieving all files in ascending order");
 	    	                         for(int i = 0; i< Objects.requireNonNull(list).length; i++)
 	    	                         {
@@ -297,6 +297,7 @@ public class project_1 {
 	    	                                //File obj1 = new File("C:\\Users\\VINAY\\OneDrive\\Desktop\\Project\\Project_1\\Design.txt");
 	    	                              if(obj5.exists()){
 	    	                                  obj5.delete();
+						      System.out.println("Deleted file!");
 	    	                                  System.out.println("list of remaining files in directory after deleting file:");
 	    	                                  String[] list = obj.list();
 	    	                                  for (int i =0;i< list.length;i++)
