@@ -256,13 +256,12 @@ public class project_1 {
 	    	                        System.out.println("5. Main menu");
 	    	                        System.out.println("6. Exit program");
 	    	                        int choice_3 = scan.nextInt();
-
+					 File obj5 = new File("C:\\Users\\VINAY\\OneDrive\\Desktop\\Project\\Project_1\\Design.txt");
 	    	                        if (choice_3==1)
 	    	                        {
 	    	                            try {
-	    	                                File obj1 = new File("C:\\Users\\VINAY\\OneDrive\\Desktop\\Project\\Project_1\\Design.txt");
-	    	                                obj1.createNewFile();
-	    	                                System.out.println("You have created a file viz: "+obj1.getName());
+	    	                                obj5.createNewFile();
+	    	                                System.out.println("You have created a file viz: "+obj5.getName());
 	    	                            } catch (IOException e) {
 	    	                                e.printStackTrace();
 	    	                            }
@@ -295,9 +294,9 @@ public class project_1 {
 	    	                            int choice_4 = scan.nextInt();
 	    	                            if (choice_4==1)
 	    	                            {
-	    	                                File obj1 = new File("C:\\Users\\VINAY\\OneDrive\\Desktop\\Project\\Project_1\\Design.txt");
-	    	                              if(obj.exists()){
-	    	                                  obj1.delete();
+	    	                                //File obj1 = new File("C:\\Users\\VINAY\\OneDrive\\Desktop\\Project\\Project_1\\Design.txt");
+	    	                              if(obj5.exists()){
+	    	                                  obj5.delete();
 	    	                                  System.out.println("list of remaining files in directory after deleting file:");
 	    	                                  String[] list = obj.list();
 	    	                                  for (int i =0;i< list.length;i++)
@@ -319,7 +318,7 @@ public class project_1 {
 	    	                            File obj1 = new File("C:\\Users\\VINAY\\OneDrive\\Desktop\\Project\\Project_1\\Design.txt");
 	    	                            String name = scan.nextLine();
 	    	                              name=  scan.nextLine();
-	    	                            String[] list = obj.list();
+	    	                            File[] list = obj.listFiles();
 	    	                           if(list[0].startsWith(name) && list[0].endsWith("txt"))
 	    	                            {
 	    	                                System.out.println("Your searched file is exist");
